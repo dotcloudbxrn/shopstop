@@ -1,0 +1,5 @@
+{ products: 
+   { id: 1,
+     getAll: [Function: getProducts],
+     add: [Function],
+     findByName: [Function] } }
