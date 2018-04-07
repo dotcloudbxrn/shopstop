@@ -1,4 +1,4 @@
-const port = 3000;
+const port = 8008;
 const config = require('./config/config')
 const database = require('./config/database.config')
 const express = require('express')
@@ -10,4 +10,6 @@ database(config[environment])
 require('./config/express')(app, config[environment])
 require('./config/routes')(app)
 
-app.listen(port)
+app.listen(port, () => {
+	console.log('listening on port', port)
+})
