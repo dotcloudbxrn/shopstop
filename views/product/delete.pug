@@ -1,0 +1,17 @@
+extends ../layout.pug
+
+block content
+  form.form.form-center(method="post", enctype="multipart/form-data")
+    h2 Delete Product
+    .form-group
+      label
+      .product-card
+        img.product-img(src=`${product.image}`)
+    .form-group
+      label(for='name') Name
+      input#name.input-field(name="name", type="text", value=product.name disabled)
+    .form-group
+      label(for='description') Description
+      input#description.input-field(name="description", type="text", value=product.description disabled)
+    .form-group
+      input.form-btn.btn.btn-danger(type="submit", value='Delete')

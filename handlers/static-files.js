@@ -13,9 +13,6 @@ function getContentType (url) {
   }
 }
 
-// you EXPORT the actual function that way,
-// it's a shorthand notation, syntactic sugar 
-// this fag uses.
 module.exports = (req, res) => {
   req.pathname = req.pathname || url.parse(req.url).pathname 
   if (req.pathname.startsWith('/content/') && req.method === 'GET')  {
@@ -26,7 +23,7 @@ module.exports = (req, res) => {
           'Content-Type': 'text/plain'
         });
 
-        res.write('Your DAMN resource was not found!')
+        res.write('Your resource was not found!')
         res.end()
         return
       }

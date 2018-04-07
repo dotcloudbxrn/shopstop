@@ -12,7 +12,7 @@ module.exports = (config) => {
       return
     }
 
-    console.log('Connected!')
+    console.log('db connected!')
   })
 
   require('../models/Product')
