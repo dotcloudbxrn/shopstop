@@ -12,8 +12,7 @@ module.exports.addGet = (req, res) => {
 
 module.exports.addPost = (req, res) => {
   let productObj = req.body
-
-  if (!productObj.image) {
+  if (!req.file) {
     productObj.image = "https://www.2checkout.com/upload/images/graphic_product_tangible.png"
   } else {
     // Don't understand why but following the tutorial on this one, since I couldn't figure it out on my own
