@@ -1,4 +1,4 @@
-const port = 8008;
+const port = process.env.PORT || 8008;
 const config = require('./config/config')
 const database = require('./config/database.config')
 const express = require('express')
