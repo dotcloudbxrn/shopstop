@@ -13,7 +13,6 @@ module.exports = (config) => {
       console.log(err)
       return
     }
-
     console.log('db connected!')
   })
 
